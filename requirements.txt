@@ -1,0 +1,9 @@
+Flask==0.10.1
+threading
+os
+time
+sys
+pandas
+numpy
+pynput
+
