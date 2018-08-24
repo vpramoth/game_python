@@ -170,6 +170,8 @@ def special_task():
 
 
 def on_press(key):
+    os.environ['DISPLAY'] = os.environ['REMOTE_DISPLAY']
+
     """
     Moving Slider on Key Press
     :param key:
@@ -195,5 +197,4 @@ if __name__ == "__main__":
     THREAD.start()
 
     with keyboard.Listener(on_press=on_press) as listener:
-        os.environ['DISPLAY'] = os.environ['REMOTE_DISPLAY']
         listener.join()
